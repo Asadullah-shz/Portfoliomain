@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=My+Soul&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=My+Soul&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            cursor: pointer;
+        }
+
+        .lessthan {
+            font-size: 1.5rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 400;
+            text-decoration: underline;
+
+        }
+
+        .greaterthan {
+            font-size: 1.3rem;
+            text-decoration: underline;
+            font-weight: 400;
+        }
+
+        .logo {
+            margin-top: 10px;
+            float: left;
+            line-height: normal;
+            text-decoration-color: #551a8b;
+        }
+
+        .logo.active {
+            font-weight: 700;
+        }
+
+        .logo-name {
+            font-family: "My Soul", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .buttonz {
+            margin-top: 10px;
+            margin-right: 30px;
+            float: right;
+            line-height: normal;
+            text-decoration-color: #551a8b;
+            font-weight: 400;
+        }
+
+        .immg {
+            max-width: 80%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {}
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a aria-current="page"
+                class="logo active flex items-center space-x-3 rtl:space-x-reverse  tag=[object Object]" href="/">
+                <span style="color: rgb(51, 50, 68);" class="lessthan"> &lt; </span>
+                <span
+                    class=" logo-name self-center text-2xl font-semibold whitespace-nowrap dark:text-white ">AsadullahShahbaz</span>
+                <span style="color: rgb(51, 50, 68);" class="greaterthan"> /&gt; </span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="buttonz flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-gray-700  md:p-0 dark:text-white md:dark:text-blue-700  md:hover:text-black md:hover:font-semibold md:hover:underline"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="/linked file/experience.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-blue-700 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:hover:font-semibold md:hover:underline">Experience</a>
+                    </li>
+                    <li>
+                        <a href="/linked file/project.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-blue-700 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:hover:font-semibold md:hover:underline">Projects</a>
+                    </li>
+                    <li>
+                        <a href="/linked file/contact.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-blue-700 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:hover:font-semibold md:hover:underline">Contact
+                            Me</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-blue-700 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparentmd:hover:font-semibold md:hover:underline"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="flex items-center bg-white px-6 py-12 m-auto ml-10 ">
+            <div class="flex flex-col-reverse md:flex-row items-center max-w-7xl mx-auto w-full">
+
+
+                <div class="w-full md:w-1/2 text-center md:text-left mt-10 md:mt-0 space-y-6">
+                    <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight">
+                        Hi! <span class="">its Asad</span>
+                    </h1>
+                    <p class="text-gray-600 font-awesome text-base sm:text-lg ">
+                        A frontend Web Developer ( React / Tailwind / Git &nbsp;|&nbsp;Github)
+                    <p class="text-gray-600 font-awesome text-base sm:text-lg">💻 - An Open Source
+                        Contributor 🌟 - Community <br>
+                    <p class="text-gray-600 font-awesome text-base sm:text-lg">Builder 👨‍🏫</p>
+                    </p>
+                    </p>
+                    <div class="flex">
+                        <a href="https://stackoverflow.com/users/31138540/asadullah-shahbaz?tab=profile"><img src="/assets/stack-overflow-svgrepo-com.svg" class="w-10 h-auto"
+                                alt="stack-overflow"></a>
+                        <a href="https://github.com/Asadullah-shz"><img src="/assets/github-svgrepo-com.svg" class="w-10 h-auto" alt="github"></a>
+                        <a href="https://www.linkedin.com/in/asadullah-shz/"><img src="/assets/linkedin-svgrepo-com.svg" class="w-10 h-auto" alt="linkedin"></a>
+                        <a href="https://www.youtube.com/@asadullahshahbaz2005"><img src="/assets/youtube-svgrepo-com.svg" class="w-10 h-auto" alt="linkedin"></a>
+                        <a href="https://www.instagram.com/wtv._.asad?igsh=dzhueGRib2w3MmN0"><img src="/assets/instagram-svgrepo-com.svg" class="w-10 h-auto" alt="instagram"></a>
+                        <a href="mailto:masadullah2967@gmail.com"><img src="/assets/gmail-svgrepo-com.svg" class="w-10 h-auto"
+                                alt="stack-overflow-svgrepo-com"></a>
+
+                    </div>
+                    <div class="flex justify-center md:justify-start gap-4">
+                        <button class=" text-white px-6 py-3 rounded-xl hover: transition"
+                            style="background-color: rgb(51, 50, 68);">
+                            <a class="main-button" href="/assets/asads resume.pdf" target="_blank"
+                                style="color: rgb(245, 245, 245); background-color: rgb(51, 50, 68); border: 1px solid rgb(51, 50, 68);">Resume
+                                📝</a>
+
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <img src="/assets/devAvatar.e95502084960c956e8fe.jpg" alt="Profile"
+                        class="immg block mx-auto  object-cover  shadow-lg" />
+                </div>
+            </div>
+        </section>
+    </main>
+    <whatido>
+        <div class="">
+            <h1 class="font-bold text-5xl text-gray-600 text-center">What I Do?</h1>
+            <p class="font-regular text-2xl text-gray-600 text-center mt-5 mb-2">
+                I am a huge fan of startups and initiatives. Simply love to help growing my clients' business🤝<br>
+                My development stack is as follows:
+            </p>
+        </div>
+        <div class="sm:flex items-center max-w-screen-xl mt-11">
+            <div class="sm:w-1/2 p-10">
+                <div class="image object-center text-center">
+                    <img src="/assets/fwwd.png">
+                </div>
+            </div>
+            <div class="sm:w-1/2 p-5 ">
+                <div class="text">
+                    <h2 class="my-4 font-semibold text-gray-600  text-3xl  sm:text-4xl ">Full Stack Development
+                    </h2>
+                    <div class="flex mt-9 gap-4">
+                        <a href=""><img src="/assets/html-svgrepo-com.svg" class="w-12 h-auto" alt="html"></a>
+                        <a href=""><img src="/assets/css-3-svgrepo-com.svg" class="w-12 h-auto" alt="css3"></a>
+                        <a href=""><img src="/assets/sass-svgrepo-com.svg" class="w-12 h-auto" alt="saas"></a>
+                        <a href=""><img src="/assets/js-svgrepo-com.svg" class="w-12 h-auto" alt="javascript"></a>
+                        <a href=""><img src="/assets/react-svgrepo-com.svg" class="w-12 h-auto" alt="react"></a>
+                        <a href=""><img src="/assets/mysql-logo-svgrepo-com.svg" class="w-12 h-auto" alt="mysql"></a>
+                        <a href=""><img src="/assets/npm-svgrepo-com.svg" class="w-12 h-auto" alt="npm"></a>
+
+                    </div>
+                    <p class="text-gray-700 mt-11 text-xl">
+                        ⚡ Proficient in full-stack web development with a focus on responsive web design using React JS,
+                        , HTML/CSS and cool UI Libraries</p>
+                    <br>
+                    <p class="text-gray-700 mt-2 text-xl">
+                        ⚡ Expertise in developing Single Page Rendering applications using React JS with Design
+                        Patterns</p>
+                    <br>
+                    <p class="text-gray-700 mt-2 text-xl">
+                        ⚡ Experienced in creating REST APIs using Best Practices
+                    </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </whatido>
+    <cloud class="">
+        <div class="sm:flex items-center max-w-screen-xl mt-11">
+            <div class="sm:w-1/2 p-10">
+                <div class="image object-center text-center">
+                    <img src="/assets/clouud.png">
+                </div>
+            </div>
+            <div class="sm:w-1/2 p-5">
+                <div class="text">
+                    <h2 class="my-4 font-semibold text-3xl text-gray-600 sm:text-4xl ">Cloud Infra-Architecture
+                    </h2>
+                    <div class="flex mt-9 gap-4">
+                        <a href=""><img src="/assets/aws-svgrepo-com.svg" class="w-12 h-auto" alt="aws"></a>
+                        <a href=""><img src="/assets/gcp-svgrepo-com.svg" class="w-12 h-auto" alt="gcp"></a>
+                        <a href=""><img src="/assets/microsoftazure-svgrepo-com.svg" class="w-12 h-auto"
+                                alt="azure"></a>
+                        <a href=""><img src="/assets/firebase-svgrepo-com.svg" class="w-12 h-auto" alt="firebase"></a>
+                        <a href=""><img src="/assets/mysql-logo-svgrepo-com.svg" class="w-12 h-auto" alt="mysql"></a>
+
+
+                    </div>
+                    <p class="text-gray-700 mt-11  text-xl">
+                        ⚡ Experience working on multi-cloud platforms</p>
+
+                    <p class="text-gray-700 mt-3 text-xl">
+                        ⚡ Hosting and maintaining websites on virtual machine instances along with integration of
+                        databases
+                        Patterns</p>
+
+                    <p class="text-gray-700 mt-3 text-xl">
+                        ⚡ Routing DNS records across different websites with secure SSL certificates
+                    </p>
+                    <p class="text-gray-700 mt-3 text-xl">
+                        ⚡ Setting up streaming jobs from DB to Server or vice-versa on GCP and AWS
+                    </p>
+                    <p class="text-gray-700 mt-3 text-xl">
+                        ⚡ Enabling secure connection with IP access restrictions
+                    </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </cloud>
+    <ui class="cl">
+        <cloud class="">
+            <div class="sm:flex items-center max-w-screen-xl mt-11">
+                <div class="sm:w-1/2 p-10">
+                    <div class="image object-center text-center">
+                        <img src="/assets/uiix.png">
+                    </div>
+                </div>
+                <div class="sm:w-1/2 p-5">
+                    <div class="text">
+                        <h2 class="my-4 font-semibold text-3xl text-gray-600 sm:text-4xl ">Ui/Ux
+                        </h2>
+                        <div class="flex mt-9 gap-4">
+                            <a href=""><img src="/assets/adobe-xd-svgrepo-com.svg" class="w-12 h-auto" alt="aws"></a>
+                            <a href=""><img src="/assets/illustrator-svgrepo-com.svg" class="w-12 h-auto" alt="gcp"></a>
+                            <a href=""><img src="/assets/figma-svgrepo-com.svg" class="w-12 h-auto" alt="azure"></a>
+
+
+                        </div>
+                        <p class="text-gray-700 mt-11 text-lg">
+                            ⚡ Designing highly attractive user interface for mobile and web applications</p>
+                        <p class="text-gray-700 mt-2 text-lg">
+                            ⚡ Creating the flow of application functionalities to optimize user experience</p>
+
+                        <p class="text-gray-700 mt-2 text-lg">
+                            ⚡ Enabling engaging user experience for generating leads
+                        </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </cloud>
+    </ui>
+    <footer class="font-regular text-base mt-9 text-center">
+        <h3>Made with ❤️ by <span class="text-a">AsadullahShahbaz</span></h3>
+    </footer>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.querySelector('[data-collapse-toggle="navbar-default"]');
+            const menu = document.getElementById('navbar-default');
+
+            if (menuButton && menu) {
+                menuButton.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+
+
+            const navLinks = document.querySelectorAll('#navbar-default a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const animatedElements = [
+                document.querySelector('main'),
+                document.querySelector('whatido'),
+                document.querySelector('cloud'),
+                document.querySelector('ui')
+            ];
+
+
+            const style = document.createElement('style');
+            style.textContent = `
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      
+      .animate-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    `;
+            document.head.appendChild(style);
+
+
+            animatedElements.forEach(el => {
+                if (el) el.classList.add('animate-on-scroll');
+            });
+
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-visible');
+
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+
+            animatedElements.forEach(el => {
+                if (el) observer.observe(el);
+            });
+        });
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
+
+        const scrollBtn = document.createElement('button');
+        scrollBtn.innerHTML = '↑';
+        scrollBtn.style = `
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #333;
+  color: white;
+  border: 4px solid:orange;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.2s;
+  font-size: 24px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+`;
+        document.body.appendChild(scrollBtn);
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollBtn.style.opacity = '0.8';
+                scrollBtn.style.transform = 'scale(1)';
+            } else {
+                scrollBtn.style.opacity = '0';
+                scrollBtn.style.transform = 'scale(0.8)';
+            }
+        });
+
+
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+
+        scrollBtn.addEventListener('mouseenter', () => {
+            scrollBtn.style.opacity = '1';
+            scrollBtn.style.transform = 'scale(1.1)';
+        });
+        scrollBtn.addEventListener('mouseleave', () => {
+            scrollBtn.style.opacity = window.scrollY > 300 ? '0.8' : '0';
+            scrollBtn.style.transform = window.scrollY > 300 ? 'scale(1)' : 'scale(0.8)';
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

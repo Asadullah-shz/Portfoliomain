@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=My+Soul&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=My+Soul&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            cursor: pointer;
+        }
+
+        nav {
+            margin: 1%;
+        }
+
+        .lessthan {
+            font-size: 1.5rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 400;
+            text-decoration: underline;
+        }
+
+        .greaterthan {
+            font-size: 1.3rem;
+            text-decoration: underline;
+            font-weight: 400;
+        }
+
+        .logo {
+            margin-top: 10px;
+            float: left;
+            line-height: normal;
+            text-decoration-color: #551a8b;
+        }
+
+        .logo.active {
+            font-weight: 700;
+        }
+
+        .logo-name {
+            font-family: "My Soul", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .buttonz {
+            margin-top: 10px;
+            margin-right: 30px;
+            float: right;
+            line-height: normal;
+            text-decoration-color: #551a8b;
+            font-weight: 400;
+        }
+
+        .immg {
+            max-width: 80%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        #description {
+            display: none;
+            
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #002df8;
+            ;
+            border-radius: 10px;
+        }
+
+        #descriptions {
+            display: none;
+           
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #002df8;
+            border-radius: 10px;
+        }
+
+        #descriptionz {
+            display: none;
+           
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #002df8;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+       
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 
+        opacity 0.6s ease-out,
+        transform 0.6s ease-out;
+}
+
+.fade-in-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.exo {
+    transition-delay: 0.2s;
+}
+
+.work {
+    transition-delay: 0.4s;
+}
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {}
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a aria-current="page"
+                class="logo active flex items-center space-x-3 rtl:space-x-reverse  tag=[object Object]" href="/">
+                <span style="color: rgb(51, 50, 68);" class="lessthan"> &lt; </span>
+                <span
+                    class=" logo-name self-center text-2xl font-semibold whitespace-nowrap dark:text-white ">AsadullahShahbaz</span>
+                <span style="color: rgb(51, 50, 68);" class="greaterthan"> /&gt; </span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="buttonz flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="/index.html"
+                            class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-gray-700  md:p-0 dark:text-white md:dark:text-blue-700  md:hover:text-black md:hover:font-semibold md:hover:underline"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="/linked file/experience.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-blue-700 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:hover:font-semibold md:hover:underline">Experience</a>
+                    </li>
+                    <li>
+                        <a href="/linked file/project.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-blue-700 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:hover:font-semibold md:hover:underline">Projects</a>
+                    </li>
+                    <li>
+                        <a href="/linked file/contact.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-blue-700 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:hover:font-semibold md:hover:underline">Contact
+                            Me</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0 dark:text-white md:dark:hover:text-blue-700 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparentmd:hover:font-semibold md:hover:underline"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <experience class="exo">
+        <div class="sm:flex items-center max-w-screen-xl mt-11">
+            <div class="sm:w-1/2 p-10">
+                <div class="image object-center text-center">
+                    <img src="/assets/generated-image-1752623407110-canvus-ai.png">
+                </div>
+            </div>
+            <div class="sm:w-1/2 p-5 ">
+                <div class="text">
+                    <h2 class="my-4 font-semibold text-gray-600 text-center text-5xl  sm:text-4xl ">Experience
+                    </h2>
+                    <h2 class="my-4 font-semibold text-gray-600 text-center text-5xl  sm:text-4xl ">Work and
+                        Volunteership
+                    </h2>
+
+                    <p class="text-gray-700 mt-11 text-xl text-center">
+                        As a Full Stack Developer with three years of industry experience, I have a solid background in
+                        both frontend and backend development. My expertise spans various technologies and frameworks,
+                        enabling me to build and maintain comprehensive web applications across diverse domains,
+                        including e-commerce and social media platforms.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </experience>
+    <work class="border border-blue border-radius ">
+        <div class="border-  border-gray-700 m-12 p-4 bg-gray-100 ">
+            <div class="flex justify-between ">
+                <button id="toggleButton" class="font-semibold">Work</button>
+                <button id="togglesButton"><img src="/assets/plus-large-svgrepo-com.svg" class="w-4 h-auto mt-1 "
+                        alt=""></button>
+            </div>
+            <div id="description" class="mt-12">
+                <span class="flex p-2">
+                    <img src="/assets/Aptagon-Technologies-PNG.png" class="w-11 h-auto mr-8 mt-5">
+
+                    <div class="">
+                        <div class="flex gap-64  ">
+
+                            <h1 class="text-lg font-semibold mr-20">Software Engineer ||&nbsp;(React/SpringBoot/Java)
+                            </h1>
+                            <h3 class="mr-8">(Nov 2024 - Present) <p class="ml-20 text-sm ">Remote Work</p>
+                            </h3>
+
+                        </div>
+                        <h4 class="text-m font-awesome -mt-4 ">Aptagon Technologies</h4>
+                    </div>
+                </span>
+
+                <p class="ml-20 text-sm mb-3">I engineered reusable React components, elevated code quality through
+                    systematic
+                    refactoring, and implemented microservice architecture using Spring Boot and Java. By collaborating
+                    with cross-functional teams, I transformed stakeholder requirements into high-impact project
+                    outcomes.</p>
+            </div>
+            <div id="descriptions" class="mt-12">
+                <span class="flex p-2">
+                    <img src="/assets/R.jpeg" class="w-11 h-auto mr-8 mt-5">
+
+                    <div class="">
+                        <div class="flex gap-64  ">
+
+                            <h1 class="text-m font-semibold mr-20">Ui/Ux Designer ||&nbsp;(Figma/Photoshop/Illustrator) &nbsp;&nbsp;&nbsp;
+                            </h1>
+                            <h3 class="mr-8">(March 2022 - Present) <p class="ml-20 text-sm ">Remote Work</p>
+                            </h3>
+
+                        </div>
+                        <h4 class="text-m font-awesome -mt-4 ">Tkxel</h4>
+                    </div>
+                </span>
+
+                <p class="ml-20 text-sm mb-3">Lead end-to-end UX research and interface design for enterprise SaaS
+                    products across fintech, healthcare, and logistics domains. Conducted user interviews, competitive
+                    analysis, and usability testing for 12+ global clients, improving task completion rates by 35%.
+                    Created interactive prototypes (Figma, Adobe XD) and design systems used by 20+ cross-functional
+                    teams. Collaborated with developers to implement responsive frontends (React, Angular) while
+                    maintaining 95% design fidelity</p>
+            </div>
+            <div id="descriptionz" class="mt-12">
+                 <span class="flex p-2">
+                    <img src="/assets/curemd-vector.svg" class="w-11 h-auto mr-8 mt-5">
+
+                    <div class="">
+                        <div class="flex gap-64  ">
+
+                            <h1 class="text-m font-semibold mr-20">Intern Software Engineer ||&nbsp;(Mern Stack) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </h1>
+                            <h3 class="mr-8">(June 2024 - Nov 2024 ) <p class="ml-20 text-sm ">On-Site</p>
+                            </h3>
+
+                        </div>
+                        <h4 class="text-m font-awesome -mt-4 ">CureMD (Lahore)</h4>
+                    </div>
+                </span>
+
+                <p class="ml-20 text-sm mb-3">Developed and maintained healthcare management systems using the MERN
+                    stack (MongoDB, Express, React, Node.js). Optimized EHR (Electronic Health Records) modules by
+                    redesigning RESTful APIs, improving data retrieval speed by 55%. </p>
+            </div>
+        </div>
+    </work>
+<footer class="font-regular text-base mt-9 text-center">
+        <h3>Made with ❤️ by <span class="text-a">AsadullahShahbaz</span></h3>
+    </footer>
+</body>
+<script>
+    
+
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            scrollToTopBtn.classList.add('show');
+        } else {
+            scrollToTopBtn.classList.remove('show');
+        }
+    });
+
+    const scrollBtn = document.createElement('button');
+    scrollBtn.innerHTML = '↑';
+    scrollBtn.style = `
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #333;
+  color: white;
+  border: 4px solid:orange;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.2s;
+  font-size: 24px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+`;
+    document.body.appendChild(scrollBtn);
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            scrollBtn.style.opacity = '0.8';
+            scrollBtn.style.transform = 'scale(1)';
+        } else {
+            scrollBtn.style.opacity = '0';
+            scrollBtn.style.transform = 'scale(0.8)';
+        }
+    });
+
+
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+
+    scrollBtn.addEventListener('mouseenter', () => {
+        scrollBtn.style.opacity = '1';
+        scrollBtn.style.transform = 'scale(1.1)';
+    });
+    scrollBtn.addEventListener('mouseleave', () => {
+        scrollBtn.style.opacity = window.scrollY > 100 ? '0.8' : '0';
+        scrollBtn.style.transform = window.scrollY > 100 ? 'scale(1)' : 'scale(0.8)';
+    });
+
+    const toggleButton = document.getElementById('togglesButton');
+    const description = document.getElementById('description');
+    const descriptions = document.getElementById('descriptions');
+    const descriptionz = document.getElementById('descriptionz');
+
+
+    toggleButton.addEventListener('click', () => {
+        if (description.style.display === 'none' || description.style.display === '') {
+            description.style.display = 'block';
+            toggleButton.textContent = '-';
+        } else {
+            description.style.display = 'none';
+            toggleButton.textContent = '+';
+
+
+        }
+    });
+    toggleButton.addEventListener('click', () => {
+        if (descriptions.style.display === 'none' || descriptions.style.display === '') {
+            descriptions.style.display = 'block';
+            toggleButton.textContent = '-';
+        } else {
+            descriptions.style.display = 'none';
+            toggleButton.textContent = '+';
+
+
+        }
+    });
+    toggleButton.addEventListener('click', () => {
+        if (descriptionz.style.display === 'none' || descriptionz.style.display === '') {
+            descriptionz.style.display = 'block';
+            toggleButton.textContent = '-';
+        } else {
+            descriptionz.style.display = 'none';
+            toggleButton.textContent = '+';
+
+
+        }
+    });
+    
+    
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+}, {
+    threshold: 0.1, 
+    rootMargin: '0px 0px -100px 0px' 
+});
+
+
+document.querySelectorAll('.exo, .work').forEach((section) => {
+    section.classList.add('fade-in-up');
+    observer.observe(section);
+});
+
+document.querySelectorAll('#description, #descriptions, #descriptionz').forEach((item) => {
+    item.classList.add('fade-in-up');
+    observer.observe(item);
+});
+
+const collapseButton = document.querySelector('[data-collapse-toggle="navbar-default"]');
+const menu = document.getElementById('navbar-default');
+
+if (collapseButton && menu) {
+    collapseButton.addEventListener('click', function() {
+        menu.classList.toggle('hidden');
+    });
+}
+
+document.addEventListener('click', function(event) {
+    const isMenuClicked = menu.contains(event.target);
+    const isButtonClicked = collapseButton.contains(event.target);
+    const isMenuVisible = !menu.classList.contains('hidden');
+    
+    if (isMenuVisible && !isMenuClicked && !isButtonClicked) {
+        menu.classList.add('hidden');
+    }
+});
+
+
+const menuItems = document.querySelectorAll('#navbar-default a');
+menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        menu.classList.add('hidden');
+    });
+});
+
+
+
+</script>
+
+</html>
