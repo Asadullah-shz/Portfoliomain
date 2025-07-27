@@ -80,6 +80,9 @@
             opacity: 1;
             transform: translateY(0);
         }
+        footer{
+            margin-top: 13rem;
+        }
     </style>
     <script>
         tailwind.config = {
@@ -167,7 +170,7 @@
         </div>
     </experience>
     <projects>
-        <div class="min-h-[70vh] w-screen p-10 mt-11 mb-24">
+        <div class="h-screen w-screen p-10 mt-11">
 
             <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
 
@@ -249,10 +252,12 @@
         </div>
     </projects>
 
-    <footer class="font-regular text-base mt-9 text-center pb-6">
-        <h3 class="">Made with ❤️ by <span class="text-a">AsadullahShahbaz</span></h3>
+   <footer class="font-regular text-base  text-center ">
+        <h3>Made with ❤️ by <span class="text-a">AsadullahShahbaz</span></h3>
     </footer>
-    <script>
+
+</body>
+<script>
 
                document.addEventListener('DOMContentLoaded', function () {
             const menuButton = document.querySelector('[data-collapse-toggle="navbar-default"]');
@@ -381,10 +386,7 @@
             scrollBtn.style.transform = window.scrollY > 300 ? 'scale(1)' : 'scale(0.8)';
         });
 
-        const projectCards = document.querySelectorAll('.project-card');
+        
 
     </script>
-
-</body>
-
 </html>
