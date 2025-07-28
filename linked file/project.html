@@ -80,11 +80,13 @@
             opacity: 1;
             transform: translateY(0);
         }
-        footer{
-            margin-top: 13rem;
+
+        footer {
+            margin-top: 29rem;
         }
-        .proj{
-            padding: 2rem;
+
+        .proj {
+            padding: 2.5rem;
         }
     </style>
     <script>
@@ -172,8 +174,8 @@
             </div>
         </div>
     </experience>
-    <projects>
-        <div class="proj h-screen w-screen  mt-11">
+    <projects class="proo">
+        <div class="proj h-screen w-screen  mt-60">
 
             <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
 
@@ -183,7 +185,7 @@
                             src="/assets/book-bookmark-minimalistic-svgrepo-com.svg" class="w-5 h-auto flex "
                             alt="">Metric
                         Hub
-                       
+
 
                     </h2>
 
@@ -211,7 +213,7 @@
                     <h2 class="font-mono font-bold text-xl flex gap-3"><img
                             src="/assets/book-bookmark-minimalistic-svgrepo-com.svg" class="w-5 h-auto flex  "
                             alt="">FlowBoard
-                      
+
 
                     </h2>
                     </h2>
@@ -241,14 +243,15 @@
                         checkout process.
                     </p>
                 </a>
-                 <a class="flex  p-4 bg-gray-100 border-2 border-solid border-black/5 transition-all hover:bg-black/10 flex flex-col items-stretch justify-start gap-2"
+                <a class="flex  p-4 bg-gray-100 border-2 border-solid border-black/5 transition-all hover:bg-black/10 flex flex-col items-stretch justify-start gap-2"
                     href="https://github.com/Asadullah-shz/Devfolio">
                     <h2 class="font-mono font-bold text-xl flex gap-3"><img
-                            src="/assets/book-bookmark-minimalistic-svgrepo-com.svg" class="w-5 h-auto  " alt="">DevFolio
-                        
+                            src="/assets/book-bookmark-minimalistic-svgrepo-com.svg" class="w-5 h-auto  "
+                            alt="">DevFolio
+
                     </h2>
 
-                    <p class="text-xs" > "DevFolio is a modern, responsive personal portfolio designed to showcase
+                    <p class="text-xs"> "DevFolio is a modern, responsive personal portfolio designed to showcase
                         your skills, projects, and experience. Built with the latest web technologies, it offers a clean
                         and intuitive user interface, ensuring a seamless browsing experience across all devices. With
                         customizable components and a focus on performance, DevFolio is the perfect starting point for
@@ -269,45 +272,45 @@
         </div>
     </projects>
 
-   <footer class="font-regular text-base  text-center ">
+    <footer class="font-regular text-base  text-center ">
         <h3>Made with ❤️ by <span class="text-a">AsadullahShahbaz</span></h3>
     </footer>
 
 </body>
 <script>
 
-               document.addEventListener('DOMContentLoaded', function () {
-            const menuButton = document.querySelector('[data-collapse-toggle="navbar-default"]');
-            const menu = document.getElementById('navbar-default');
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuButton = document.querySelector('[data-collapse-toggle="navbar-default"]');
+        const menu = document.getElementById('navbar-default');
 
-            if (menuButton && menu) {
-                menuButton.addEventListener('click', () => {
-                    menu.classList.toggle('hidden');
-                });
-            }
+        if (menuButton && menu) {
+            menuButton.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
 
 
-            const navLinks = document.querySelectorAll('#navbar-default a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    menu.classList.add('hidden');
-                });
+        const navLinks = document.querySelectorAll('#navbar-default a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
             });
         });
+    });
 
 
-        document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
 
-            const animatedElements = [
-                document.querySelector('main'),
-                document.querySelector('whatido'),
-                document.querySelector('cloud'),
-                document.querySelector('ui')
-            ];
+        const animatedElements = [
+            document.querySelector('main'),
+            document.querySelector('whatido'),
+            document.querySelector('cloud'),
+            document.querySelector('ui')
+        ];
 
 
-            const style = document.createElement('style');
-            style.textContent = `
+        const style = document.createElement('style');
+        style.textContent = `
       .animate-on-scroll {
         opacity: 0;
         transform: translateY(20px);
@@ -319,44 +322,44 @@
         transform: translateY(0);
       }
     `;
-            document.head.appendChild(style);
+        document.head.appendChild(style);
 
 
-            animatedElements.forEach(el => {
-                if (el) el.classList.add('animate-on-scroll');
-            });
-
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-visible');
-
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            });
-
-
-            animatedElements.forEach(el => {
-                if (el) observer.observe(el);
-            });
-        });
-        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollToTopBtn.classList.add('show');
-            } else {
-                scrollToTopBtn.classList.remove('show');
-            }
+        animatedElements.forEach(el => {
+            if (el) el.classList.add('animate-on-scroll');
         });
 
-        const scrollBtn = document.createElement('button');
-        scrollBtn.innerHTML = '↑';
-        scrollBtn.style = `
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-visible');
+
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+
+        animatedElements.forEach(el => {
+            if (el) observer.observe(el);
+        });
+    });
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.add('show');
+        } else {
+            scrollToTopBtn.classList.remove('show');
+        }
+    });
+
+    const scrollBtn = document.createElement('button');
+    scrollBtn.innerHTML = '↑';
+    scrollBtn.style = `
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -373,37 +376,38 @@
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 `;
-        document.body.appendChild(scrollBtn);
+    document.body.appendChild(scrollBtn);
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollBtn.style.opacity = '0.8';
-                scrollBtn.style.transform = 'scale(1)';
-            } else {
-                scrollBtn.style.opacity = '0';
-                scrollBtn.style.transform = 'scale(0.8)';
-            }
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollBtn.style.opacity = '0.8';
+            scrollBtn.style.transform = 'scale(1)';
+        } else {
+            scrollBtn.style.opacity = '0';
+            scrollBtn.style.transform = 'scale(0.8)';
+        }
+    });
+
+
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
+    });
 
 
-        scrollBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+    scrollBtn.addEventListener('mouseenter', () => {
+        scrollBtn.style.opacity = '1';
+        scrollBtn.style.transform = 'scale(1.1)';
+    });
+    scrollBtn.addEventListener('mouseleave', () => {
+        scrollBtn.style.opacity = window.scrollY > 300 ? '0.8' : '0';
+        scrollBtn.style.transform = window.scrollY > 300 ? 'scale(1)' : 'scale(0.8)';
+    });
 
 
-        scrollBtn.addEventListener('mouseenter', () => {
-            scrollBtn.style.opacity = '1';
-            scrollBtn.style.transform = 'scale(1.1)';
-        });
-        scrollBtn.addEventListener('mouseleave', () => {
-            scrollBtn.style.opacity = window.scrollY > 300 ? '0.8' : '0';
-            scrollBtn.style.transform = window.scrollY > 300 ? 'scale(1)' : 'scale(0.8)';
-        });
 
-        
+</script>
 
-    </script>
 </html>
