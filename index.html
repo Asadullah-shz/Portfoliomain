@@ -15,7 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=My+Soul&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <style>
         body {
             cursor: pointer;
@@ -69,6 +69,29 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
+
+        .notification {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #333333ad;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 30px;
+            font-size: 17px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .notification.show {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
     <script>
         tailwind.config = {
@@ -82,6 +105,9 @@
 </head>
 
 <body>
+    <div id="notification-container" class="notification">
+        <span id="notification-message">Website is under construction. Please check back later for updates.</span>
+    </div>
 
     <nav class="bg-white border-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -148,14 +174,19 @@
                     </p>
                     </p>
                     <div class="flex">
-                        <a href="https://stackoverflow.com/users/31138540/asadullah-shahbaz?tab=profile"><img src="/assets/stack-overflow-svgrepo-com.svg" class="w-10 h-auto"
+                        <a href="https://stackoverflow.com/users/31138540/asadullah-shahbaz?tab=profile"><img
+                                src="/assets/stack-overflow-svgrepo-com.svg" class="w-10 h-auto"
                                 alt="stack-overflow"></a>
-                        <a href="https://github.com/Asadullah-shz"><img src="/assets/github-svgrepo-com.svg" class="w-10 h-auto" alt="github"></a>
-                        <a href="https://www.linkedin.com/in/asadullah-shz/"><img src="/assets/linkedin-svgrepo-com.svg" class="w-10 h-auto" alt="linkedin"></a>
-                        <a href="https://www.youtube.com/@asadullahshahbaz2005"><img src="/assets/youtube-svgrepo-com.svg" class="w-10 h-auto" alt="linkedin"></a>
-                        <a href="https://www.instagram.com/wtv._.asad?igsh=dzhueGRib2w3MmN0"><img src="/assets/instagram-svgrepo-com.svg" class="w-10 h-auto" alt="instagram"></a>
-                        <a href="mailto:masadullah2967@gmail.com"><img src="/assets/gmail-svgrepo-com.svg" class="w-10 h-auto"
-                                alt="stack-overflow-svgrepo-com"></a>
+                        <a href="https://github.com/Asadullah-shz"><img src="/assets/github-svgrepo-com.svg"
+                                class="w-10 h-auto" alt="github"></a>
+                        <a href="https://www.linkedin.com/in/asadullah-shz/"><img src="/assets/linkedin-svgrepo-com.svg"
+                                class="w-10 h-auto" alt="linkedin"></a>
+                        <a href="https://www.youtube.com/@asadullahshahbaz2005"><img
+                                src="/assets/youtube-svgrepo-com.svg" class="w-10 h-auto" alt="linkedin"></a>
+                        <a href="https://www.instagram.com/wtv._.asad?igsh=dzhueGRib2w3MmN0"><img
+                                src="/assets/instagram-svgrepo-com.svg" class="w-10 h-auto" alt="instagram"></a>
+                        <a href="mailto:masadullah2967@gmail.com"><img src="/assets/gmail-svgrepo-com.svg"
+                                class="w-10 h-auto" alt="stack-overflow-svgrepo-com"></a>
 
                     </div>
                     <div class="flex justify-center md:justify-start gap-4">
@@ -302,39 +333,40 @@
     </footer>
     <button id="scrollToTopBtn" class="fixed bottom-4 right-4 bg-blue-500 text-white p-3 rounded-full shadow-lg hidden">
         ↑
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuButton = document.querySelector('[data-collapse-toggle="navbar-default"]');
-            const menu = document.getElementById('navbar-default');
+        <script>
 
-            if (menuButton && menu) {
-                menuButton.addEventListener('click', () => {
-                    menu.classList.toggle('hidden');
-                });
-            }
+            document.addEventListener('DOMContentLoaded', function () {
+                const menuButton = document.querySelector('[data-collapse-toggle="navbar-default"]');
+                const menu = document.getElementById('navbar-default');
+
+                if (menuButton && menu) {
+                    menuButton.addEventListener('click', () => {
+                        menu.classList.toggle('hidden');
+                    });
+                }
 
 
-            const navLinks = document.querySelectorAll('#navbar-default a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    menu.classList.add('hidden');
+                const navLinks = document.querySelectorAll('#navbar-default a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.add('hidden');
+                    });
                 });
             });
-        });
 
 
-        document.addEventListener('DOMContentLoaded', function () {
+            document.addEventListener('DOMContentLoaded', function () {
 
-            const animatedElements = [
-                document.querySelector('main'),
-                document.querySelector('whatido'),
-                document.querySelector('cloud'),
-                document.querySelector('ui')
-            ];
+                const animatedElements = [
+                    document.querySelector('main'),
+                    document.querySelector('whatido'),
+                    document.querySelector('cloud'),
+                    document.querySelector('ui')
+                ];
 
 
-            const style = document.createElement('style');
-            style.textContent = `
+                const style = document.createElement('style');
+                style.textContent = `
       .animate-on-scroll {
         opacity: 0;
         transform: translateY(20px);
@@ -346,44 +378,44 @@
         transform: translateY(0);
       }
     `;
-            document.head.appendChild(style);
+                document.head.appendChild(style);
 
 
-            animatedElements.forEach(el => {
-                if (el) el.classList.add('animate-on-scroll');
-            });
-
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-visible');
-
-                    }
+                animatedElements.forEach(el => {
+                    if (el) el.classList.add('animate-on-scroll');
                 });
-            }, {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
+
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate-visible');
+
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                });
+
+
+                animatedElements.forEach(el => {
+                    if (el) observer.observe(el);
+                });
+            });
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollToTopBtn.classList.add('show');
+                } else {
+                    scrollToTopBtn.classList.remove('show');
+                }
             });
 
-
-            animatedElements.forEach(el => {
-                if (el) observer.observe(el);
-            });
-        });
-        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollToTopBtn.classList.add('show');
-            } else {
-                scrollToTopBtn.classList.remove('show');
-            }
-        });
-
-        const scrollBtn = document.createElement('button');
-        scrollBtn.innerHTML = '↑';
-        scrollBtn.style = `
+            const scrollBtn = document.createElement('button');
+            scrollBtn.innerHTML = '↑';
+            scrollBtn.style = `
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -400,39 +432,46 @@
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 `;
-        document.body.appendChild(scrollBtn);
+            document.body.appendChild(scrollBtn);
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollBtn.style.opacity = '0.8';
-                scrollBtn.style.transform = 'scale(1)';
-            } else {
-                scrollBtn.style.opacity = '0';
-                scrollBtn.style.transform = 'scale(0.8)';
-            }
-        });
-
-
-        scrollBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollBtn.style.opacity = '0.8';
+                    scrollBtn.style.transform = 'scale(1)';
+                } else {
+                    scrollBtn.style.opacity = '0';
+                    scrollBtn.style.transform = 'scale(0.8)';
+                }
             });
-        });
 
 
-        scrollBtn.addEventListener('mouseenter', () => {
-            scrollBtn.style.opacity = '1';
-            scrollBtn.style.transform = 'scale(1.1)';
-        });
-        scrollBtn.addEventListener('mouseleave', () => {
-            scrollBtn.style.opacity = window.scrollY > 300 ? '0.8' : '0';
-            scrollBtn.style.transform = window.scrollY > 300 ? 'scale(1)' : 'scale(0.8)';
-        });
+            scrollBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
 
 
-    </script>
-   
+            scrollBtn.addEventListener('mouseenter', () => {
+                scrollBtn.style.opacity = '1';
+                scrollBtn.style.transform = 'scale(1.1)';
+            });
+            scrollBtn.addEventListener('mouseleave', () => {
+                scrollBtn.style.opacity = window.scrollY > 300 ? '0.8' : '0';
+                scrollBtn.style.transform = window.scrollY > 300 ? 'scale(1)' : 'scale(0.8)';
+            });
+
+            const notificationContainer = document.getElementById('notification-container');
+            const notificationMessage = document.getElementById('notification-message');
+            notificationMessage.textContent = 'Website is under construction. Please check back later for latest updates.';
+            notificationContainer.classList.add('show');
+            setTimeout(() => {
+                notificationContainer.classList.remove('show');
+            }, 2500);
+
+        </script>
+
 </body>
 
 </html>
