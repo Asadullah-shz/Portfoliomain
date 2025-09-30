@@ -122,9 +122,9 @@
 <body>
     
     <div id="main-content">
-        <div id="notification-container" class="notification">
+        <!-- <div id="notification-container" class="notification">
             <span id="notification-message">Website is under construction. Please check back later for updates.</span>
-        </div>
+        </div> -->
 
         <nav class="bg-white border-gray-200 dark:bg-gray-900">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -498,7 +498,7 @@
                 const progressBar = document.getElementById('progress-bar');
                 const loadingText = document.querySelector('.loading-text');
 
-                // Text options for loading animation
+               
                 const textOptions = [
                     "Initializing",
                     "Loading Assets",
@@ -509,55 +509,55 @@
                 let progress = 0;
                 let textIndex = 0;
 
-                // Function to update loading progress
+             
                 function updateProgress() {
                     if (progress < 100) {
-                        // Increment progress randomly to simulate loading
+                      
                         progress += Math.random() * 12;
                         if (progress > 100) progress = 100;
 
-                        // Update progress bar
+                    
                         progressBar.style.width = progress + '%';
 
-                        // Change text at certain intervals
+                    
                         if (progress > (textIndex + 1) * 25) {
                             textIndex = (textIndex + 1) % textOptions.length;
                             loadingText.textContent = textOptions[textIndex];
                         }
 
-                        // Continue loading
+                   
                         setTimeout(updateProgress, 300 + Math.random() * 300);
                     } else {
-                        // Loading complete
+                      
                         loadingText.textContent = "Complete";
 
-                        // Wait a moment then transition to main content
+                       
                         setTimeout(transitionToContent, 800);
                     }
                 }
 
-                // Function to transition to main content
+               
                 function transitionToContent() {
-                    // Fade out loading screen
+                    
                     loadingScreen.style.opacity = '0';
                     loadingScreen.style.transform = 'scale(1.1)';
                     
-                    // After fade out completes
+                    
                     setTimeout(() => {
-                        // Hide loading screen
+                      
                         loadingScreen.style.display = 'none';
 
-                        // Show main content
+                     
                         mainContent.style.display = 'block';
 
-                        // Fade in main content
+                        
                         setTimeout(() => {
                             mainContent.style.opacity = '1';
                         }, 50);
                     }, 500);
                 }
 
-                // Start the loading process
+                
                 setTimeout(updateProgress, 200);
                 e.preventDefault();
 
