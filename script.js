@@ -290,9 +290,7 @@ menuItems.forEach(item => {
 });
 
 
-//}
 
-/* Add smooth scrolling for anchor links */
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -305,7 +303,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-/* Dark mode toggle */
 const darkModeBtn = document.createElement('button');
 darkModeBtn.innerHTML = '🌙';
 darkModeBtn.title = 'Toggle dark mode';
@@ -331,7 +328,7 @@ darkModeBtn.addEventListener('click', () => {
     darkModeBtn.innerHTML = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
 });
 
-/* Add dark mode styles */
+
 const darkStyle = document.createElement('style');
 darkStyle.textContent = `
   body.dark-mode {
@@ -352,7 +349,7 @@ darkStyle.textContent = `
 `;
 document.head.appendChild(darkStyle);
 
-/* Animate skill bars if present */
+
 document.querySelectorAll('.skill-bar').forEach(bar => {
     const value = bar.getAttribute('data-value');
     bar.style.width = '0%';
@@ -362,7 +359,7 @@ document.querySelectorAll('.skill-bar').forEach(bar => {
     }, 400);
 });
 
-/* Lazy load images */
+
 if ('IntersectionObserver' in window) {
     const lazyImages = document.querySelectorAll('img[data-src]');
     const imgObserver = new IntersectionObserver((entries, observer) => {
